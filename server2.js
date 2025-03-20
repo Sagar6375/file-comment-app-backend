@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(cors({
-  origin: "http://localhost:3000", // Allow requests from the frontend
+  origin: "*",  // Allow requests from the frontend
   credentials: true,
 }));
 app.use(express.json());
